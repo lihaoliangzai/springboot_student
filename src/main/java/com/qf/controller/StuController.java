@@ -11,7 +11,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.List;
-
+/*
+ssssssssss
+ */
 @Controller
 @RequestMapping("stu")
 public class StuController {
