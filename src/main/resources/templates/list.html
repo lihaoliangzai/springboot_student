@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>学生列表</title>
+    <!--<base href="<%=request.getContextPath()+"/"%>" />-->
+</head>
+<body>
+<h1>学生管理</h1>
+    <table>
+        <tr>
+            <td>学生ID</td>
+            <td>姓名</td>
+            <td>年龄</td>
+            <td>密码</td>
+            <td>操作</td>
+        </tr>
+        <tr th:each="student : ${list}">
+            <td th:text="${student.id}">ID</td>
+            <td th:text="${student.username}">姓名</td>
+            <td th:text="${student.age}">年龄</td>
+            <td th:text="${student.password}">密码</td>
+            <td><a th:href="|/stu/delete/${student.id}|">删除</a></td>
+        </tr>
+    </table>
+</body>
+</html>
